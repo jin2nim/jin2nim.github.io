@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+  /* header */
+
+  header {
+    padding: 10px 0;
+  }
+  header h2 {
+    font-size: 1.5rem;
+  }
+  nav {
+    display: none;
+  }
+
+  #home .wrap {
+    gap: 20px;
+  }
+  .svg-container {
+    margin: 0;
+  }
+  .text-area {
+    text-align: center;
+    gap: 10px;
+  }
+  .text-area h2 {
+    font-size: 2.5rem;
+  }
+  .text-area p {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .sns a {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}

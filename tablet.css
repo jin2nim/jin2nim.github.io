@@ -1,0 +1,100 @@
+/* small-labtop */
+@media screen and (max-width: 1440px) {
+}
+
+/* tablet large */
+@media screen and (max-width: 1200px) {
+  .text-area h2 {
+    font-size: 4.5rem;
+  }
+  .text-area p {
+    font-size: 1.5rem;
+  }
+}
+
+/* tablet small */
+@media screen and (max-width: 992px) {
+  /* header */
+  .menu-btn {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .close-btn {
+    cursor: pointer;
+  }
+
+  nav {
+    width: 80%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #9dbdff;
+    z-index: 100;
+    display: none;
+  }
+
+  nav.open {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li {
+    padding: 25px;
+  }
+  nav ul a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  nav ul li:hover {
+    background-color: #ff9874;
+  }
+
+  nav ul li a:hover {
+    color: #fff;
+  }
+  .close-btn {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .close-btn i {
+    color: #fff;
+  }
+
+  #home .wrap {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .svg-container {
+    margin: 0;
+  }
+  .text-area {
+    width: 100% !important;
+    text-align: center;
+  }
+  .text-area h2 {
+    font-size: 3.5rem;
+  }
+  .text-area p {
+    font-size: 1.5rem;
+  }
+
+  .sns {
+    justify-content: center;
+  }
+}
