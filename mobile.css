@@ -11,9 +11,6 @@
     display: none;
   }
 
-  #home .wrap {
-    gap: 20px;
-  }
   .svg-container {
     margin: 0;
   }
@@ -33,7 +30,47 @@
     width: 30px;
     height: 30px;
   }
+
+  .im-title {
+    text-align: center;
+    font-size: 3rem;
+  }
+  #project {
+    margin-bottom: 100px;
+  }
+
+  #contact h2 {
+    font-size: 2.25rem;
+  }
+
+  .contact-box > img {
+    width: 30%;
+    margin-bottom: 50px;
+  }
+  .info-area {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  #home .wrap {
+    gap: 60px;
+  }
+
+  #home .wrap > div {
+    width: 70%;
+  }
+  .skills-wrap {
+    gap: 30px;
+  }
+  .skills-wrap > div {
+    width: 60px;
+  }
+  .project-item {
+    width: 100%;
+  }
+
+  #contact {
+    padding: 100px 20px;
+  }
 }

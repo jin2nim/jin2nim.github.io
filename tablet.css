@@ -10,6 +10,9 @@
   .text-area p {
     font-size: 1.5rem;
   }
+  .project-item {
+    width: 48%;
+  }
 }
 
 /* tablet small */
@@ -78,8 +81,9 @@
 
   #home .wrap {
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
   }
+
   .svg-container {
     margin: 0;
   }
@@ -96,5 +100,9 @@
 
   .sns {
     justify-content: center;
+  }
+
+  .skills-wrap > div {
+    width: 80px;
   }
 }
