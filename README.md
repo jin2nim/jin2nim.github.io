@@ -1,6 +1,6 @@
 # Hazz Portfolio
 
-# Project Overview
+## Project Overview
 
 This page features my personal projects, work from previous employers, and a personal introduction. It was created using HTML, CSS, and JavaScript.
 
