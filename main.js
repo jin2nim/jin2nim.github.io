@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const child = document.querySelector('.back-svg');
 
     function updateParentHeight() {
-        console.log('Child height:', child.offsetHeight); // 자식 높이 확인
-        parent.style.height = `${child.offsetHeight}px`; // 부모 높이 설정
+        parent.style.height = `${child.offsetHeight}px`;
     }
 
     window.addEventListener('resize', updateParentHeight);
@@ -27,3 +26,43 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("open");
     });
   });
+
+// skill-box background
+// Select the skill-back element and the random-code element
+const skillBoxes = document.querySelectorAll('.skill-box');
+
+function generateRandomCode() {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let code = '';
+  for (let i = 0; i < 600; i++) {
+    code += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return code;
+}
+
+skillBoxes.forEach((skillBox) => {
+  const skillBack = skillBox.querySelector('.skill-back');
+  const randomCode = skillBox.querySelector('.random-code');
+  const backGradient = skillBox.querySelector('.back-gradient');
+
+  skillBox.addEventListener('mousemove', (e) => {
+    const { offsetWidth: width, offsetHeight: height } = skillBack;
+    const { offsetX: x, offsetY: y } = e;
+    
+    const xPercent = (x / width) * 100;
+    const yPercent = (y / height) * 100;
+
+    skillBack.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, rgba(118, 149, 255, 0.8), rgba(255, 152, 116, 0.8))`;
+    backGradient.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1))`;
+    
+    randomCode.textContent = generateRandomCode();
+  });
+
+  skillBox.addEventListener('mouseleave', () => {
+    skillBack.style.background = ''; // Reset the background gradient
+    backGradient.style.background = ''; // Reset the back gradient
+    randomCode.textContent = ''; // Clear the random code
+  });
+});
+
+
