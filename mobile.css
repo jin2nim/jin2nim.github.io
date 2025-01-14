@@ -35,8 +35,60 @@
     text-align: center;
     font-size: 3rem;
   }
+
+  #experience {
+    padding-top: 200px;
+  }
+
   #project {
     margin-bottom: 100px;
+  }
+
+  .project-item {
+    .project-popup {
+      min-width: 85%;
+      padding: 30px 20px;
+      .popup-title {
+        padding-bottom: 20px;
+        font-size: 1.2rem;
+      }
+      .popup-grid{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        .popup-left {
+          img {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+          }
+          .project-btn-area {
+            display: flex;
+            gap: 5px;
+            width: 100%;
+            justify-content: space-between;
+            text-align: center;
+            a {
+              font-size: 0.845rem;
+              text-wrap: nowrap;
+            }
+          }
+        }
+        .popup-right {
+          .project-context {
+            /* display: flex; */
+            h3{
+              text-wrap: nowrap;
+              font-size: 1rem;
+            }
+            p, li {
+              font-size: 0.845rem;
+            }
+          }
+        }
+      }
+    }
   }
 
   #contact h2 {
@@ -63,6 +115,7 @@
   .skills-wrap {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 2%;
   }
   .skills-wrap > div {
     width: 60px;

@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.querySelector(".menu-btn");
     const closeBtn = document.querySelector(".close-btn");
     const nav = document.querySelector("nav");
+    const menuItems = nav.querySelectorAll('li');
 
     menuBtn.addEventListener("click", function () {
       nav.classList.add("open");
@@ -25,7 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.addEventListener("click", function () {
       nav.classList.remove("open");
     });
-  });
+
+    menuItems.forEach(item => {
+      item.addEventListener("click", function(){
+        nav.classList.remove("open");
+      })
+    })
+});
 
 // skill-box background
 // Select the skill-back element and the random-code element
@@ -34,7 +41,7 @@ const skillBoxes = document.querySelectorAll('.skill-box');
 function generateRandomCode() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let code = '';
-  for (let i = 0; i < 600; i++) {
+  for (let i = 0; i < 650; i++) {
     code += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   return code;
@@ -66,3 +73,34 @@ skillBoxes.forEach((skillBox) => {
 });
 
 
+// POPUP SHOW & HIDE
+const projectItems = document.querySelectorAll('.project-item');
+
+projectItems.forEach((item)=>{
+  const popup = item.querySelector('.project-popup');
+  const closeBtn = popup.querySelector('.popup-close');
+  const overlay = document.querySelector('.modal-overlay');
+
+  item.addEventListener('click', (e)=>{
+    if (e.target.closest('.project-popup')) return;
+    popup.style.display = 'block';
+
+    document.body.style.overflow = 'hidden';
+    overlay.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click',()=>{
+    popup.style.display = 'none';
+
+    document.body.style.overflow = ''
+    overlay.style.display = 'none';
+  });
+
+  // when click outside the popup, close the popup
+  overlay.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+
+    document.body.style.overflow = ''
+    overlay.style.display = 'none';
+  })
+});
