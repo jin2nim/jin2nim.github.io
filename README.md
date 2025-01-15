@@ -7,6 +7,7 @@ https://jin2nim.github.io/
 ## Project Overview
 
 This page features my personal projects, work from previous employers, and a personal introduction. It was created using HTML, CSS, and JavaScript.
+<img src="./preview/readme_preview.png">
 
 ## Features
 
