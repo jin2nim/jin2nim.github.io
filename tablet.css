@@ -52,13 +52,13 @@
     text-align: center;
   }
 
-  nav ul li {
-    padding: 25px;
-  }
   nav ul a {
     color: #fff;
     font-size: 1.5rem;
     font-weight: 500;
+    width: 100%;
+    display: block;
+    padding: 25px;
   }
 
   nav ul li:hover {
@@ -105,5 +105,9 @@
   .skills-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #experience {
+    padding-top: 250px;
   }
 }
